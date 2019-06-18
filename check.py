@@ -63,7 +63,8 @@ for key in dictionary:
     print 'version: 2.', key, ' url: ', dictionary[key]
 
     path = dictionary[key].split('/')
-    filename = path[len(path) - 1][37:]
+    filename = path[len(path) - 1]  #[37:]
+    print filename
 
     if not os.path.isfile(downloadPath + filename):
         versionFile = urllib2.urlopen(dictionary[key])
@@ -72,3 +73,5 @@ for key in dictionary:
             print 'wrote version to: ', downloadPath + filename
 
 print 'all versions are written to disk!'
+
+
