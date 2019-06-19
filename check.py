@@ -38,7 +38,7 @@ versionFolders = []
 dictionary = dict()
 rootPath = 'https://skynet-s3.al.ge.com/cooking/WallOvenRelease/cooking_WallOvenRelease_on_change_master/'
 currentState = State.folders
-downloadPath = '/home/andrew/versions/'
+downloadPath = '/home/pi/versions/'
 
 response = urllib2.urlopen(rootPath)
 html = response.read()
